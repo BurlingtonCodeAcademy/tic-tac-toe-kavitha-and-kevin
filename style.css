@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: violet;
+}
+
+#row-1 {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  width: 20vw;
+  height: 20vh;
+  border-bottom: 5px solid black
+}
+
+#row-2 {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  width: 20vw;
+  height: 20vh;
+  
+}
+
+#row-3 {
+  display:flex;
+  flex-direction: row;
+  background-color: green;
+  width: 20vw;
+  height: 20vh;
+  border-top: 5px solid black
+}
+
+#cell-0 {
+  border-right: 5px solid black;
+  background-color: yellow
+}
