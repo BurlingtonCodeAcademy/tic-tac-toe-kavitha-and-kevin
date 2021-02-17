@@ -13,9 +13,7 @@ body {
   margin: 0
 }
 
-h1 {
-  
-}
+
 
 .board {
   display: flex;
@@ -56,14 +54,14 @@ h1 {
   
 }
 
-#cell-0,
-#cell-3,
-#cell-6 {
+#c0,
+#c3,
+#c6 {
   border-right: 5px solid black;
 }
 
-#cell-2,
-#cell-5,
-#cell-8 {
+#c2,
+#c5,
+#c8 {
   border-left: 5px solid black;
 }
