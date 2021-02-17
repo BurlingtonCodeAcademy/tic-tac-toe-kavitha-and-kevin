@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic Tac Toe</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tic Tac Toe</title>
-  <link href="style.css" rel="stylesheet">
-</head>
+  <body>
+    <div id="main">
+      <h2>Tic Tac Toe</h2>
+      <div class="board">
+        <div id="row-1">
+          <div class="cell" id="c0">cell-0</div>
+          <div class="cell" id="c1">cell-1</div>
+          <div class="cell" id="c2">cell-2</div>
+        </div>
+        <div id="row-2">
+          <div class="cell" id="c3">cell-3</div>
+          <div class="cell" id="c4">cell-4</div>
+          <div class="cell" id="c5">cell-5</div>
+        </div>
+        <div id="row-3">
+          <div class="cell" id="c6">cell-6</div>
+          <div class="cell" id="c7">cell-7</div>
+          <div class="cell" id="c8">cell-8</div>
+        </div>
+      </div>
 
-<body>
-  <h2>Tic Tac Toe</h2>
-  <div class="board">
-    <div id="row-1">
-      <section class="cell">
-        <div id="cell-0">cell-0</div>
-        <div id="cell-1">cell-1</div>
-        <div id="cell-2">cell-2</div>
-      </section>
+      <div class="status">
+        <button id="start" type="button">Start Game</button>
+        <h4 id="statusBar">Status</h4>
+      </div>
     </div>
-    <div id="row-2">
-      <div id="cell-3">cell-3</div>
-      <div id="cell-4">cell-4</div>
-      <div id="cell-5">cell-5</div>
-    </div>
-    <div id="row-3">
-      <div id="cell-6">cell-6</div>
-      <div id="cell-7">cell-7</div>
-      <div id="cell-8">cell-8</div>
-    </div>
-  </div>
-
-  <div class="status">
-    <button id="start" type="button">Start Game</button>
-    <h4 id="statusBar">Status</h4>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
