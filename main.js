@@ -12,9 +12,10 @@ let timer;
 start.addEventListener('click', startGame)
 function startGame () {
   start.disabled = true; // disables the button once clicked
-  statusBar.textContent = "Player X's Turn"
-  
+  statusBar.textContent = "Player X's Turn";
 }
+
+
 
 //game
 
