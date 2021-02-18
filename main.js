@@ -16,7 +16,7 @@ let c7 = document.getElementById("c7");
 let c8 = document.getElementById("c8");
 let c9 = document.getElementById("c9");
 let currentCell;
-let timer
+let timer;
 
 /*let timer
 
