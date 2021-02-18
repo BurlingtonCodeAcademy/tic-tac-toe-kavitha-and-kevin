@@ -6,7 +6,7 @@ let cells= Array.from(document.getElementsByClassName(".cell"))
 let gameTitle=document.getElementById('game-title')
 let boxes =[null,null,null,null,null,null,null,null,null]
 
-let c1 = document.getElementById("c1");
+/*let c1 = document.getElementById("c1");
 let c2 = document.getElementById("c2");
 let c3 = document.getElementById("c3");
 let c4 = document.getElementById("c4");
@@ -106,5 +106,4 @@ if (c1 ===player &&& c7===player){
 
 
 
-//game
-
+//game*/
