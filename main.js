@@ -94,4 +94,9 @@ if (boxes[1] ===player &&& boxes[7]===player){
 }
 }
 
+}
+
+
+
+//game
 
