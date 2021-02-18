@@ -48,10 +48,10 @@ function startGame (event) {
   start.disabled = true; // disables the button once clicked
   statusBar.textContent = "Player X's Turn";
 }
-/*for(let item of cells){
+for(let item of cells){
 item.addEventListener('click',playerTurn)
 function playerTurn(event){
-  if(currentPlayer===true){
+  if(currentPlayer===x){
   cell.textContent='X'
   currentPlayer=false
   statusBar.textContent=`Player O's move`
@@ -65,7 +65,7 @@ if (cell.textContent==='O'|| cell.textContent==='X'){
 }
 }
 }
-/function checkWin(){
+//function checkWin(){
   /*if (c[0]===player){
 if (c1 ===player &&& c2===player){
   console.log(`${player}wins up top`)
@@ -106,5 +106,4 @@ if (c1 ===player &&& c7===player){
 
 
 
-//game
-
+//game*/
