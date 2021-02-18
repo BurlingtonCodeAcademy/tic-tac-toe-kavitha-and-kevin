@@ -6,7 +6,17 @@ let cells= Array.from(document.getElementsByClassName(".cell"))
 let gameTitle=document.getElementById('game-title')
 let boxes =[null,null,null,null,null,null,null,null,null]
 
-
+let c1 = document.getElementById("c1");
+let c2 = document.getElementById("c2");
+let c3 = document.getElementById("c3");
+let c4 = document.getElementById("c4");
+let c5 = document.getElementById("c5");
+let c6 = document.getElementById("c6");
+let c7 = document.getElementById("c7");
+let c8 = document.getElementById("c8");
+let c9 = document.getElementById("c9");
+let currentCell;
+let timer
 
 /*let timer
 
@@ -55,45 +65,43 @@ if (cell.textContent==='O'|| cell.textContent==='X'){
 }
 }
 }
-//function checkWin(){
-  /*if (boxes[0]===player){
-if (boxes[1] ===player &&& boxes[2]===player){
+/function checkWin(){
+  /*if (c[0]===player){
+if (c1 ===player &&& c2===player){
   console.log(`${player}wins up top`)
   return true;
 }
-if (boxes[3] ===player &&& boxes[6]===player){
+if (c3===player &&& c6===player){
   console.log(`${player}wins on the left`)
   return true;
 }
-if (boxes[4] ===player &&& boxes[8]===player){
+if (c4 ===player &&& c8===player){
   console.log(`${player}wins diagonally`)
   return true;
 }
 }
 //bottom up and across
-if (boxes[8]===player){
-if (boxes[2] ===player &&& boxes[5]===player){
+if (c8===player){
+if (c2===player &&& c5===player){
   console.log(`${player}wins right`)
   return true;
 }
-if (boxes[7] ===player &&& boxes[6]===player){
+if (c7 ===player &&& c6===player){
   console.log(`${player}wins on the bottom`)
   return true;
 }
 }
 //middle vertical and horizontal
-if (boxes[4]===player){
-if (boxes[3] ===player &&& boxes[5]===player){
+if (c4===player){
+if (c3 ===player &&& c5===player){
   console.log(`${player}wins middle horizontal`)
   return true;
 }
-if (boxes[1] ===player &&& boxes[7]===player){
+if (c1 ===player &&& c7===player){
   console.log(`${player}wins on the middle vertical`)
   return true;
 }
 }
-}
-
 }
 
 
