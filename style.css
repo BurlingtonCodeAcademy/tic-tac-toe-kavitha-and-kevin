@@ -13,7 +13,10 @@ body {
   margin: 0
 }
 
-
+.game-title{
+  text-align:center;
+  font-size: 70px;
+}
 
 .board {
   display: flex;
@@ -51,7 +54,8 @@ body {
 .cell {
   height: auto;
   width: 20vw;
-  
+  cursor: pointer;
+
 }
 
 #c0,
@@ -64,4 +68,29 @@ body {
 #c5,
 #c8 {
   border-left: 5px solid black;
+}
+
+
+#start{
+  width: 220px;
+  height:400;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20;
+  text-align: center;
+
+}
+
+.game-status{
+  padding-top: 40px;
+}
+#statusBar{
+  width: 300px;
+  height:400;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20;
+  text-align: center;
 }
