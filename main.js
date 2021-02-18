@@ -1,10 +1,11 @@
-
 //Initialization of DOM variables
-let start = document.getElementById ("start")
-let statusBar = document.getElementById ("statusBar")
-let cells= Array.from(document.getElementsByClassName(".cell"))
-let gameTitle=document.getElementById('game-title')
-let boxes =[null,null,null,null,null,null,null,null,null]
+let start = document.getElementById("start");
+let statusBar = document.getElementById("statusBar");
+let cells = Array.from(document.getElementsByClassName(".cell"));
+let gameTitle = document.getElementById("game-title");
+let boxes = [null, null, null, null, null, null, null, null, null];
+let player1 = 0
+let player2 = 0
 
 let c1 = document.getElementById("c1");
 let c2 = document.getElementById("c2");
@@ -38,72 +39,75 @@ let winning combination =[
 [0,4,8]
 [2,4,6]
 ]*/
-// Initialization of player variables 
+// Initialization of player variables
 
-let currentPlayer="X";
+let currentPlayer = "X";
+
 
 //Start button fading out and displaying player status
-start.addEventListener('click', startGame)
-function startGame (event) {
+start.addEventListener("click", startGame);
+function startGame(event) {
   start.disabled = true; // disables the button once clicked
   statusBar.textContent = "Player X's Turn";
 }
-for(let item of cells){
-item.addEventListener('click',playerTurn)
-function playerTurn(event){
-  if(currentPlayer===x){
-  cell.textContent='X'
-  currentPlayer=false
-  statusBar.textContent=`Player O's move`
-} else {
-  cell.textContent='O'
-  currentPlayer=true
-  statusBar.textContent=`Player X's move`
-}
-if (cell.textContent==='O'|| cell.textContent==='X'){
-  statusBar.textContent=`select an empty cell`
-}
-}
-}
-//function checkWin(){
-  /*if (c[0]===player){
-if (c1 ===player &&& c2===player){
-  console.log(`${player}wins up top`)
-  return true;
-}
-if (c3===player &&& c6===player){
-  console.log(`${player}wins on the left`)
-  return true;
-}
-if (c4 ===player &&& c8===player){
-  console.log(`${player}wins diagonally`)
-  return true;
-}
-}
-//bottom up and across
-if (c8===player){
-if (c2===player &&& c5===player){
-  console.log(`${player}wins right`)
-  return true;
-}
-if (c7 ===player &&& c6===player){
-  console.log(`${player}wins on the bottom`)
-  return true;
-}
-}
-//middle vertical and horizontal
-if (c4===player){
-if (c3 ===player &&& c5===player){
-  console.log(`${player}wins middle horizontal`)
-  return true;
-}
-if (c1 ===player &&& c7===player){
-  console.log(`${player}wins on the middle vertical`)
-  return true;
-}
-}
+
+for (let item of cells) {
+  item.addEventListener("click", playerTurn);
+  function playerTurn(event) {
+    if (!event.target.textContent) {
+      if (currentPlayer === "X") {
+        event.target.textContent = "X";
+        currentPlayer = "O";
+        statusBar.textContent = `Player O's turn`;
+      } else if (currentPlayer === "O") {
+        event.target.textContent = "O";
+        currentPlayer = "X";
+        statusBar.textContent = `Player X's turn`;
+      }
+      //checkWin();
+      console.log(currentPlayer)
+      console.log(event.target);
+    } else alert("select an empty cell");
+  }
 }
 
-
+function checkWin() {
+  if (c[0] === player) {
+    if (c1 === player && c2 === player) {
+      console.log(`${player}wins up top`);
+      return true;
+    }
+    if (c3 === player && c6 === player) {
+      console.log(`${player}wins on the left`);
+      return true;
+    }
+    if (c4 === player && c8 === player) {
+      console.log(`${player}wins diagonally`);
+      return true;
+    }
+  }
+  //bottom up and across
+  if (c8 === player) {
+    if (c2 === player && c5 === player) {
+      console.log(`${player}wins right`);
+      return true;
+    }
+    if (c7 === player && c6 === player) {
+      console.log(`${player}wins on the bottom`);
+      return true;
+    }
+  }
+  //middle vertical and horizontal
+  if (c4 === player) {
+    if (c3 === player && c5 === player) {
+      console.log(`${player}wins middle horizontal`);
+      return true;
+    }
+    if (c1 === player && c7 === player) {
+      console.log(`${player}wins on the middle vertical`);
+      return true;
+    }
+  }
+}
 
 //game*/
