@@ -1,7 +1,7 @@
 //Initialization of DOM variables
 let start = document.getElementById("start");
 let statusBar = document.getElementById("statusBar");
-let cells = Array.from(document.getElementsByClassName(".cell"));
+let cells = Array.from(document.getElementsByClassName("cell"));
 let gameTitle = document.getElementById("game-title");
 let boxes = [null, null, null, null, null, null, null, null, null];
 let player1 = 0
@@ -46,12 +46,26 @@ let currentPlayer = "X";
 
 //Start button fading out and displaying player status
 start.addEventListener("click", startGame);
+
 function startGame(event) {
   start.disabled = true; // disables the button once clicked
   statusBar.textContent = "Player X's Turn";
+  for (let cell of cells) {
+    cell.addEventListener('click', addX)
+  }
 }
 
-for (let item of cells) {
+function addX (event) {
+  let image = document.createElement('image');
+  image.src = '/x.svg';
+  document.querySelector('.cell').appendChild(image)
+}
+
+
+
+
+
+/*for (let item of cells) {
   item.addEventListener("click", playerTurn);
   function playerTurn(event) {
     if (!event.target.textContent) {
@@ -67,9 +81,9 @@ for (let item of cells) {
       //checkWin();
       console.log(currentPlayer)
       console.log(event.target);
-    } else alert("select an empty cell");
+    } else alert("Please select an empty cell");
   }
-}
+}*/
 
 function checkWin() {
   if (c[0] === player) {
