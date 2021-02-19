@@ -5,6 +5,8 @@ let cells = Array.from(document.getElementsByClassName("cell"));
 let gameTitle = document.getElementById("game-title");
 let clock = document.getElementById("clock");
 let reset = document.getElementById("reset");
+let player1 = document.getElementById("player1")
+let player2 = document.getElementById("player2")
 
 //will store our current game here, empty array helps to track the played cells.
 let boxes = ["", "", "", "", "", "", "", "", ""];
@@ -19,7 +21,7 @@ start.addEventListener("click", startGame);
 function startGame() {
   start.disabled = true;
   // disables the button once clicked
-  statusBar.textContent = "Player X's Turn";
+  statusBar.textContent = player1.value + "'s Turn";
 }
 
 reset.addEventListener("click", resetGame);
@@ -28,7 +30,7 @@ function resetGame() {
   boxes = ["", "", "", "", "", "", "", "", ""];
   document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
   currentPlayer = "X";
-  statusBar.textContent = "Player X's Turn"
+  statusBar.textContent = player1.value + "'s Turn"
   c0.style.backgroundColor = "";
   c1.style.backgroundColor = "";
   c2.style.backgroundColor = "";
@@ -64,7 +66,7 @@ for (let items of cells) {
           checkWin(currentPlayer);
 
           currentPlayer = "O";
-          statusBar.textContent = `Player O's turn`;
+          statusBar.textContent = player2.value + "'s turn";
         } else if (currentPlayer === "O") {
           event.target.textContent = "O";
           //assigning a variable to get the id of each cell and substring is used to get the second letter of the id name(c1)
@@ -74,7 +76,7 @@ for (let items of cells) {
           //calling check win function here  and pass the current player moves and winning combinations
           checkWin(currentPlayer);
           currentPlayer = "X";
-          statusBar.textContent = `Player X's turn`;
+          statusBar.textContent = player1.value + "'s turn";
         }
       }
       //this prompts players to select and empty cell in the board
