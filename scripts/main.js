@@ -4,8 +4,7 @@ let statusBar = document.getElementById("statusBar");
 let cells = Array.from(document.getElementsByClassName("cell"));
 let gameTitle = document.getElementById("game-title");
 let clock = document.getElementById("clock");
-let reset = document.getElementById("reset")
-
+let reset = document.getElementById("reset");
 
 //will store our current game here, empty array helps to track the played cells.
 let boxes = ["", "", "", "", "", "", "", "", ""];
@@ -18,10 +17,27 @@ let currentPlayer = "X";
 //Start button fading out and displaying player status
 start.addEventListener("click", startGame);
 function startGame() {
-  boxes = ["", "", "", "", "", "", "", "", ""];
   start.disabled = true;
   // disables the button once clicked
   statusBar.textContent = "Player X's Turn";
+}
+
+reset.addEventListener("click", resetGame);
+function resetGame() {
+  start.disabled = false;
+  boxes = ["", "", "", "", "", "", "", "", ""];
+  document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
+  currentPlayer = "X";
+  statusBar.textContent = "Player X's Turn"
+  c0.style.backgroundColor = "";
+  c1.style.backgroundColor = "";
+  c2.style.backgroundColor = "";
+  c3.style.backgroundColor = "";
+  c4.style.backgroundColor = "";
+  c5.style.backgroundColor = "";
+  c6.style.backgroundColor = "";
+  c7.style.backgroundColor = "";
+  c8.style.backgroundColor = "";
 }
 
 function startNewGame() {
@@ -41,7 +57,7 @@ for (let items of cells) {
         //depending on the current player, text content changes between two players
         if (currentPlayer === "X") {
           event.target.textContent = "X";
-          
+
           let x = event.target.id.substring(1);
           boxes[x] = event.target.textContent;
           //checkWin function is called here to compare with the winning combinations and to decide if the player won or not
@@ -97,7 +113,6 @@ function checkWin(player) {
         return true;
       }, 100);
     }
-   
   }
   //bottom up and across
   if (boxes[8] === player) {
@@ -150,7 +165,6 @@ function checkWin(player) {
       }, 100);
     }
   }
-  
 }
 
 //style.textDecoration = "line-through"
