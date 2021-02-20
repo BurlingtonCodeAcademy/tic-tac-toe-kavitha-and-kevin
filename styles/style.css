@@ -1,6 +1,6 @@
-
 body {
   margin: 0;
+  background-color: green;
 }
 
 #main {
@@ -8,15 +8,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: forestgreen;
-  margin: 0;
 }
 
 .game-title {
   text-align: center;
   font-size: 70px;
+  margin-bottom: 10px;
+  margin-top: 10px
 }
 
 .board {
@@ -61,7 +59,6 @@ body {
   justify-content: center;
 }
 
-
 #c0,
 #c3,
 #c6 {
@@ -78,6 +75,10 @@ body {
   font: size 150px;
 }
 
+#start:hover {
+  background-color: darkgray;
+}
+
 #start {
   width: 220px;
   height: 400;
@@ -87,6 +88,8 @@ body {
   padding: 20;
   text-align: center;
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #reset {
@@ -104,9 +107,20 @@ body {
 .game-status {
   padding-top: 40px;
 }
+
+#reset:hover {
+  background-color: darkgray;
+}
+
+#player-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 #statusBar {
   width: 300px;
-  height: 400;
+
   font-size: 1.5rem;
   border: 5px solid black;
   border-radius: 10px;
@@ -114,14 +128,12 @@ body {
   text-align: center;
   background-color: orange;
 }
-#clock{
+#clock {
   width: 220px;
   height: 400;
   font-size: 1.5rem;
   border: 5px solid black;
   border-radius: 10px;
-
   text-align: center;
-margin-bottom: 40px;
-
+  margin-bottom: 40px;
 }
