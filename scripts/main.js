@@ -42,6 +42,17 @@ function resetGame() {
   c8.style.backgroundColor = "";
 }
 
+/*const winningCombinations = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [2, 5, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [0, 4, 8],
+  [2, 4, 6]
+];*/
+
 function startNewGame() {
   boxes = ["", "", "", "", "", "", "", "", ""];
   start.disabled = false;
@@ -89,27 +100,27 @@ for (let items of cells) {
 function checkWin(player) {
   if (boxes[0] === player) {
     if (boxes[1] === player && boxes[2] === player) {
-      c0.style.backgroundColor = "red";
-      c1.style.backgroundColor = "red";
-      c2.style.backgroundColor = "red";
+      c0.style.backgroundColor = "blue";
+      c1.style.backgroundColor = "blue";
+      c2.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
       }, 100);
     }
     if (boxes[3] === player && boxes[6] === player) {
-      c0.style.backgroundColor = "red";
-      c3.style.backgroundColor = "red";
-      c6.style.backgroundColor = "red";
+      c0.style.backgroundColor = "blue";
+      c3.style.backgroundColor = "blue";
+      c6.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
       }, 100);
     }
     if (boxes[4] === player && boxes[8] === player) {
-      c0.style.backgroundColor = "red";
-      c4.style.backgroundColor = "red";
-      c8.style.backgroundColor = "red";
+      c0.style.backgroundColor = "blue";
+      c4.style.backgroundColor = "blue";
+      c8.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
@@ -119,18 +130,18 @@ function checkWin(player) {
   //bottom up and across
   if (boxes[8] === player) {
     if (boxes[2] === player && boxes[5] === player) {
-      c2.style.backgroundColor = "red";
-      c5.style.backgroundColor = "red";
-      c8.style.backgroundColor = "red";
+      c2.style.backgroundColor = "blue";
+      c5.style.backgroundColor = "blue";
+      c8.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
       }, 100);
     }
     if (boxes[7] === player && boxes[6] === player) {
-      c6.style.backgroundColor = "red";
-      c7.style.backgroundColor = "red";
-      c8.style.backgroundColor = "red";
+      c6.style.backgroundColor = "blue";
+      c7.style.backgroundColor = "blue";
+      c8.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
@@ -140,27 +151,27 @@ function checkWin(player) {
   //middle vertical and horizontal
   if (boxes[4] === player) {
     if (boxes[3] === player && boxes[5] === player) {
-      c3.style.backgroundColor = "red";
-      c4.style.backgroundColor = "red";
-      c5.style.backgroundColor = "red";
+      c3.style.backgroundColor = "blue";
+      c4.style.backgroundColor = "blue";
+      c5.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
       }, 100);
     }
     if (boxes[1] === player && boxes[7] === player) {
-      c1.style.backgroundColor = "red";
-      c4.style.backgroundColor = "red";
-      c7.style.backgroundColor = "red";
+      c1.style.backgroundColor = "blue";
+      c4.style.backgroundColor = "blue";
+      c7.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
       }, 100);
     }
     if (boxes[2] === player && boxes[6] === player) {
-      c2.style.backgroundColor = "red";
-      c4.style.backgroundColor = "red";
-      c6.style.backgroundColor = "red";
+      c2.style.backgroundColor = "blue";
+      c4.style.backgroundColor = "blue";
+      c6.style.backgroundColor = "blue";
       setTimeout(function () {
         alert(`Congratulations! Player ${player} wins!`);
         return true;
