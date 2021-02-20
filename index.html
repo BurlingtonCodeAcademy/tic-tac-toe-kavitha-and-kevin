@@ -1,48 +1,58 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tic Tac Toe</title>
-    <link href="/styles/style.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <div id="main">
-      <h2 class='game-title'>Tic Tac Toe </h2>
-      div class ="timer"
-        <!----<div id='clock'> <label id="hours">00</label><label id="minutes">00</label>:<label id="seconds">00</label></div>--->
-        <div id='clock'><label id="seconds">00</label></div>
-     </div>
-      <div class="board">
-        <div id="row-1">
-          <div class="cell" id="c0"></div>
-          <div class="cell" id="c1"></div>
-          <div class="cell" id="c2"></div>
-        </div>
-        <div id="row-2">
-          <div class="cell" id="c3"></div>
-          <div class="cell" id="c4"></div>
-          <div class="cell" id="c5"></div>
-        </div>
-        <div id="row-3">
-          <div class="cell" id="c6"></div>
-          <div class="cell" id="c7"></div>
-          <div class="cell" id="c8"></div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tic Tac Toe</title>
+  <link href="/styles/style.css" rel="stylesheet" />
+</head>
 
-      <div class="game-status">
-        <button id="start" type="button">Start Game</button>
-        
-      </div>
-      <div class="reset-button">
-        <button id="reset" type="button">Reset Game</button>
-      </div>
-      <h4 id="statusBar">Status</h4>
-       
+<body>
+  <div id="main">
+    <h2 class='game-title'>Tic Tac Toe </h2>
+    <h4 id="statusBar">Status</h4>
+    <div class="timer">
+      
+      <div id='clock'><label id="seconds">00</label></div>
+    </div>
     
+    <div class="board">
+      <div id="row-1">
+        <div class="cell" id="c0"></div>
+        <div class="cell" id="c1"></div>
+        <div class="cell" id="c2"></div>
+      </div>
+      <div id="row-2">
+        <div class="cell" id="c3"></div>
+        <div class="cell" id="c4"></div>
+        <div class="cell" id="c5"></div>
+      </div>
+      <div id="row-3">
+        <div class="cell" id="c6"></div>
+        <div class="cell" id="c7"></div>
+        <div class="cell" id="c8"></div>
+      </div>
+    </div>
+
+    <div class="game-status">
+      <form id="player-names">
+        <label class='player-name'><input id='player1' type='text' value='' placeholder='Player 1'></label>
+        <div id="start-submit">
+          <button id="start" value="submit" type="button">Start Game</button>
+        </div>
+        <label class='player-name'><input id='player2' type='text' value='' placeholder='Player 2'></label>
+      </form>
+    </div>
+    <div class="reset-button">
+      <button id="reset" type="button">Reset Board</button>
+    </div>
+    
+
+
     <script src="/scripts/main.js"></script>
-  </body>
+</body>
+
 </html>
+
