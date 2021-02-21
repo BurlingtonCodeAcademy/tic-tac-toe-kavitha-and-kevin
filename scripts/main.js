@@ -54,6 +54,7 @@ start.addEventListener("click", startGame);
 
 function startGame() {
   start.disabled = true;
+  totalTurns = 0;
   // disables the button once clicked
   statusBar.textContent = player1.value + "'s Turn";
   setInterval(setTime, 1000) 
@@ -129,8 +130,9 @@ function checkWin(player, playerName) {
       c0.style.backgroundColor = "red";
       c1.style.backgroundColor = "red";
       c2.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(setTime())
@@ -139,8 +141,9 @@ function checkWin(player, playerName) {
       c0.style.backgroundColor = "red";
       c3.style.backgroundColor = "red";
       c6.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations!  ${playerName} wins!`);
+        alert(`Congratulations!  ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(setTime)
@@ -149,8 +152,9 @@ function checkWin(player, playerName) {
       c0.style.backgroundColor = "red";
       c4.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
     }
@@ -162,8 +166,9 @@ function checkWin(player, playerName) {
       c2.style.backgroundColor = "red";
       c5.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -172,8 +177,9 @@ function checkWin(player, playerName) {
       c6.style.backgroundColor = "red";
       c7.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -185,8 +191,9 @@ function checkWin(player, playerName) {
       c3.style.backgroundColor = "red";
       c4.style.backgroundColor = "red";
       c5.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -195,8 +202,9 @@ function checkWin(player, playerName) {
       c1.style.backgroundColor = "red";
       c4.style.backgroundColor = "red";
       c7.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -205,8 +213,9 @@ function checkWin(player, playerName) {
       c2.style.backgroundColor = "red";
       c4.style.backgroundColor = "red";
       c6.style.backgroundColor = "red";
+      start.disabled = false;
       setTimeout(function () {
-        alert(`Congratulations! ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins! Click Reset Board then Start Game to play again.`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -214,7 +223,7 @@ function checkWin(player, playerName) {
   }
   if (totalTurns === 9) {
     setTimeout(function() {
-      alert("It's a Draw!");
+      alert("It's a Draw! Click Reset Board then Start Game to play again.");
       return true;
     }, 100)
   }
