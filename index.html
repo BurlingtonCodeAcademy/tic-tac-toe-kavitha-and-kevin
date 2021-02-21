@@ -12,15 +12,15 @@
 <body>
   <div id="main">
     <h2 class='game-title'>Tic Tac Toe </h2>
-    <h4 id="statusBar">Status</h4>
+    <h4 id="statusBar">Enjoy The Game</h4>
     <div class="timer">
-      
+
       <div id='clock'><label id="hours">00</label><label id="hours">:</label>
         <label id="minutes">00</label><label id="minutes">:</label>
         <label id="seconds">00</label>
+      </div>
     </div>
-    </div>
-    
+
     <div class="board">
       <div id="row-1">
         <div class="cell" id="c0"></div>
@@ -39,6 +39,7 @@
       </div>
     </div>
 
+<div id="forms-buttons">
     <section class="game-status">
       <form id="player-names">
         <label class='player-name'><input id='player1' type='text' value='' placeholder='Player 1'></label>
@@ -48,13 +49,20 @@
         <label class='player-name'><input id='player2' type='text' value='' placeholder='Player 2'></label>
       </form>
     </section>
+
+    <div id="reset-wrapper">
+      <div id="player-wrapper">
+        <button id="playerVPlayer" class="player-computer">Player vs. Player</button>
+      </div>
     <div class="reset-button">
-      <button id="reset" type="button">Reset Board</button>
+        <button id="reset" type="button">Reset Board</button>
+      </div>
+      <div id="computer-wrapper">
+        <button id="playerVComputer" class="player-computer">Player vs. Computer</button>
+      </div>
     </div>
-    
-
-
-    <script src="/scripts/main.js"></script>
+  </div>
+<script src="/scripts/main.js"></script>
 </body>
 
 </html>
