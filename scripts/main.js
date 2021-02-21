@@ -106,7 +106,7 @@ function playerGame() {
       if (start.disabled === true) {
         //Boolean values are used  to trigger the players to change
         //acts as guard clause to help players to select empty cell and avoid from clicking previously selected cell
-alert(event.target.textContent)
+
         if (event.target.textContent === "") {
           //depending on the current player, text content changes between two players
           if (currentPlayer === "X") {
@@ -132,7 +132,7 @@ alert(event.target.textContent)
           }
         }
         //this prompts players to select and empty cell in the board
-        else alert("Please,selecttt an empty cell")
+        else alert("Please,select an empty cell")
       } // this makes players to press the start button first and then clicking cell to start the game
       else alert("Click Start Game button ");
     });
