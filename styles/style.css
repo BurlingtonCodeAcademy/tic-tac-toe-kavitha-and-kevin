@@ -1,9 +1,9 @@
-
-    body {
-  margin: 0;
-  background-color: green;
+/*----main board container----*/
+body {
+  height: 100%;
+  background-color: cornflowerblue;
 }
-
+/*-----main wrapper------*/
 #main {
   display: flex;
   flex-direction: column;
@@ -13,9 +13,9 @@
 
 .game-title {
   text-align: center;
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 10px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .board {
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
 }
-
+/*-------cells------*/
 #row-1 {
   display: flex;
   flex-direction: row;
@@ -76,6 +76,7 @@
   font: size 150px;
 }
 
+/*----game board buttons-----*/
 #start:hover {
   background-color: darkgray;
 }
@@ -101,23 +102,12 @@
   border-radius: 10px;
   padding: 20;
   text-align: center;
-  margin-left:10px;
+  margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
 }
-
-.game-status {
-  padding-top: 40px;
-}
-
 #reset:hover {
   background-color: darkgray;
-}
-
-#player-names {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 #reset-wrapper {
@@ -126,22 +116,33 @@
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-  
 }
+
+/*----game board status bar-----*/
 
 #statusBar {
   width: 300px;
-
   font-size: 1.5rem;
   border: 5px solid black;
   border-radius: 10px;
-  padding: 20;
   text-align: center;
   background-color: orange;
 }
 
+/*---player names ------*/
+#player-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.player-name {
+  background-color: darkgray;
+  font: bold center;
+}
+
 #forms-buttons {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -155,7 +156,7 @@
   border-radius: 10px;
   padding: 20;
   text-align: center;
-  margin-left:10px;
+  margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -164,8 +165,7 @@
   background-color: darkgray;
 }
 
-
-
+/*---game board timer-----*/
 #clock {
   width: 220px;
   height: 400;
@@ -175,4 +175,3 @@
   text-align: center;
   margin-bottom: 40px;
 }
-

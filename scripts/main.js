@@ -31,7 +31,7 @@ let totalSeconds = 0;
 //----Check pVp or pVComp-----//
 // start is disabled until player selects the game type:pVp or pVcomp
 start.disabled = true;
-
+reset.disabled = true;
 playerVsComputer.addEventListener("click", () => {
   playerVsPlayer.disabled = true;
   playerVsComputer.disabled = true;
@@ -74,10 +74,13 @@ function startGame() {
 //---Restart button function----//
 //restarts the game
 reset.addEventListener("click", resetGame);
+
 function resetGame() {
   start.disabled = false;
+  playerVsPlayer.disabled = false;
+  playerVsComputer.disabled = false;
   boxes = ["", "", "", "", "", "", "", "", ""];
-  cells=document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
+  cells = document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
   currentPlayer = "X";
   //gameTimer = setInterval(setTime, 1000, true);
   //statusBar.textContent = player1.value + "'s Turn";
@@ -145,7 +148,7 @@ function computerGame() {
   for (let items of cells) {
     items.textContent === "";
     items.addEventListener("click", (event) => {
-      //if (start.disabled === true) {
+      if (start.disabled === true) {
         if (event.target.textContent === "") {
           //depending on the current player, text content changes between two players
           if (currentPlayer === "X") {
@@ -157,32 +160,32 @@ function computerGame() {
             checkWin(currentPlayer, currentPlayer);
 
             currentPlayer = "O";
-            
-            statusBar.textContent = currentPlayer + "'s turn";
 
-            let randomNumGuess = Math.floor(Math.random() * 8);
-            let i = 0
-            while (cells[randomNumGuess].textContent !== "" && i < 100) {
-              randomNumGuess = Math.floor(Math.random() * 8);
-              ++i;
-            }
-            cells[randomNumGuess].textContent = "O";
-
-            let o = randomNumGuess;
-            boxes[o] = cells[randomNumGuess].textContent;
-            //checkWin function is called here to compare with the winning combinations and to decide if the player won or not
-            checkWin(currentPlayer, currentPlayer);
-            currentPlayer = "X";
             statusBar.textContent = currentPlayer + "'s turn";
-          
-        }
+            setTimeout(function () {
+              let randomNumGuess = Math.floor(Math.random() * 8);
+              let i = 0
+              while (cells[randomNumGuess].textContent !== "" && i < 100) {
+                randomNumGuess = Math.floor(Math.random() * 8);
+                ++i;
+              }
+              cells[randomNumGuess].textContent = "O";
+
+              let o = randomNumGuess;
+              boxes[o] = cells[randomNumGuess].textContent;
+              //checkWin function is called here to compare with the winning combinations and to decide if the player won or not
+              checkWin(currentPlayer, currentPlayer);
+              currentPlayer = "X";
+              statusBar.textContent = currentPlayer + "'s turn";
+            }, 600);
+          }
         } else {
           alert("Please,select an empty cell");
         }
-      //}
-      //else {
-      //  alert("Click Start Game button");
-     // }
+      }
+      else {
+        alert("Click Start Game button");
+      }
     });
   }
 }
