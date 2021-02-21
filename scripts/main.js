@@ -33,6 +33,8 @@ let totalSeconds = 0;
 start.disabled = true;
 reset.disabled = true;
 playerVsComputer.addEventListener("click", () => {
+  player1.disabled = true;
+  player2.disabled = true;
   playerVsPlayer.disabled = true;
   playerVsComputer.disabled = true;
   start.disabled = false;
@@ -43,6 +45,7 @@ playerVsComputer.addEventListener("click", () => {
 });
 
 playerVsPlayer.addEventListener("click", () => {
+  
   playerVsPlayer.disabled = true;
   playerVsComputer.disabled = true;
   start.disabled = false;
@@ -104,7 +107,7 @@ function playerGame() {
   for (let items of cells) {
     //items.textContent === "";
     items.addEventListener("click", (event) => {
-      totalTurns = totalTurns += 1;
+      totalTurns = totalTurns += 1; //counts number of clicks, if 9 and no winner, draw
       console.log(totalTurns);
       //this statement make sure you can't enter the value before start button is pressed
       if (start.disabled === true) {
@@ -189,6 +192,7 @@ function computerGame() {
     });
   }
 }
+//Function to determine winning cell combinations
 function checkWin(player, playerName) {
 
   if (boxes[0] === player) {
