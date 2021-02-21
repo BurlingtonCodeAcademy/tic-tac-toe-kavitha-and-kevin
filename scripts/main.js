@@ -9,11 +9,14 @@ let cells = Array.from(document.getElementsByClassName("cell"));
 //will store our current game here, empty array helps to track the played cells.
 let boxes = ["", "", "", "", "", "", "", "", ""];
 let gameStatus = true;
-let totalTurns = 0
+let totalTurns = 0;
 // Initialization of player variables
 let currentPlayer = "X";
 let player1 = document.getElementById("player1")
 let player2 = document.getElementById("player2")
+// Initialization of PvP and PvC
+let pvp = document.getElementById("player")
+let pvc = document.getElementById("computer")
 
 //Clock timer Initialization
 let clock = document.getElementById("clock");
@@ -37,9 +40,18 @@ function timer(val) {
     return timerVal
   }
 }
+
+
+//pvp.addEventListener("click", playerVPlayer)
+
+  
 // Start button function//
 //Start button fading out and displaying player status
+
+
+  
 start.addEventListener("click", startGame);
+
 function startGame() {
   start.disabled = true;
   // disables the button once clicked
@@ -67,14 +79,13 @@ function resetGame() {
 }
  
 
-/*function startNewGame() {
-  boxes = ["", "", "", "", "", "", "", "", ""];
-  start.disabled = false;
-}*/
+
 //this for is used to reiterate the collection of cells from HTML
 for (let items of cells) {
   items.textContent === "";
   items.addEventListener("click", (event) => {
+    totalTurns = totalTurns+= 1; 
+    console.log(totalTurns);
     //this statement make sure you can't enter the value before start button is pressed
     if (start.disabled === true) {
       //Boolean values are used  to trigger the players to change
@@ -119,7 +130,7 @@ function checkWin(player, playerName) {
       c1.style.backgroundColor = "red";
       c2.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(setTime())
@@ -129,7 +140,7 @@ function checkWin(player, playerName) {
       c3.style.backgroundColor = "red";
       c6.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations!  ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(setTime)
@@ -139,7 +150,7 @@ function checkWin(player, playerName) {
       c4.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
     }
@@ -152,7 +163,7 @@ function checkWin(player, playerName) {
       c5.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -162,7 +173,7 @@ function checkWin(player, playerName) {
       c7.style.backgroundColor = "red";
       c8.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -175,7 +186,7 @@ function checkWin(player, playerName) {
       c4.style.backgroundColor = "red";
       c5.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -185,7 +196,7 @@ function checkWin(player, playerName) {
       c4.style.backgroundColor = "red";
       c7.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(timer)
@@ -195,13 +206,18 @@ function checkWin(player, playerName) {
       c4.style.backgroundColor = "red";
       c6.style.backgroundColor = "red";
       setTimeout(function () {
-        alert(`Congratulations! Player ${playerName} wins!`);
+        alert(`Congratulations! ${playerName} wins!`);
         return true;
       }, 100);
       clearInterval(timer)
     }
   }
-
+  if (totalTurns === 9) {
+    setTimeout(function() {
+      alert("It's a Draw!");
+      return true;
+    }, 100)
+  }
 }
 
 
