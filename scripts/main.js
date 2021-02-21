@@ -57,6 +57,7 @@ playerVsPlayer.addEventListener("click", () => {
 //Start button fading out and displaying player
 
 start.addEventListener("click", startGame);
+
 function startGame() {
   start.disabled = true;
   totalTurns = 0;
