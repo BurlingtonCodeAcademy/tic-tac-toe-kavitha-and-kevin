@@ -1,0 +1,178 @@
+/*----main board container----*/
+body {
+  height: 100%;
+  background-color: cornflowerblue;
+}
+/*-----main wrapper------*/
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-title {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*-------cells------*/
+#row-1 {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: 15vh;
+  border-bottom: 5px solid black;
+}
+
+#row-2 {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: 15vh;
+}
+
+#row-3 {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  height: 15vh;
+  border-top: 5px solid black;
+}
+
+.cell {
+  height: auto;
+  width: 20vw;
+  cursor: pointer;
+  align-items: center;
+  font: size 150px;
+  color: darkred;
+  display: flex;
+  font-size: 5rem;
+  justify-content: center;
+}
+
+#c0,
+#c3,
+#c6 {
+  border-right: 5px solid black;
+  align-items: center;
+  font: size 150px;
+}
+
+#c2,
+#c5,
+#c8 {
+  border-left: 5px solid black;
+  align-items: center;
+  font: size 150px;
+}
+
+/*----game board buttons-----*/
+#start:hover {
+  background-color: darkgray;
+}
+
+#start {
+  width: 220px;
+  height: 400;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#reset {
+  width: 220px;
+  height: 400;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#reset:hover {
+  background-color: darkgray;
+}
+
+#reset-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/*----game board status bar-----*/
+
+#statusBar {
+  width: 300px;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: orange;
+}
+
+/*---player names ------*/
+#player-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top:20px;
+}
+
+.player-name {
+  background-color: darkgray;
+  font: bold center;
+}
+
+#forms-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-computer {
+  width: 220px;
+  height: 400;
+  font-size: 1rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.player-computer:hover {
+  background-color: darkgray;
+}
+
+/*---game board timer-----*/
+#clock {
+  width: 220px;
+  height: 400;
+  font-size: 1.5rem;
+  border: 5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
