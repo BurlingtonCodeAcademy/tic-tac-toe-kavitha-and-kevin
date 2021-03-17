@@ -204,7 +204,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -216,7 +216,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations!  ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -228,7 +228,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
     }
 
@@ -243,7 +243,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -255,7 +255,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -270,7 +270,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -282,7 +282,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -294,7 +294,7 @@ function checkWin(player, playerName) {
       setTimeout(function () {
         alert(`Congratulations! ${playerName} wins!`);
         setTime(false)
-        resetGame()
+        location.reload()
       }, 100);
 
     }
@@ -303,7 +303,7 @@ function checkWin(player, playerName) {
     setTimeout(function () {
       alert(`It's a Draw!`);
       setTime(false)
-      resetGame()
+      location.reload()
     }, 100)
   }
 }
