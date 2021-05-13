@@ -13,16 +13,17 @@ let boxes = ["", "", "", "", "", "", "", "", ""];
 let gameStatus = true;
 let totalTurns = 0;
 
-// Initialization of player variables
+// Initializing variables for  player buttons
 let currentPlayer = "X";
 let player1 = document.getElementById("player1");
 let player2 = document.getElementById("player2");
+
+//Initializing variables for game type buttons
 let playerVsPlayer = document.getElementById("playerVPlayer");
 let playerVsComputer = document.getElementById("playerVComputer");
 let gameType = "";
 
-
-//Clock timer Initialization
+//Clock timer Initialization to target the hours, minutes and seconds elements in game timer
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
@@ -32,18 +33,24 @@ let totalSeconds = 0;
 // start is disabled until player selects the game type:pVp or pVcomp
 start.disabled = true;
 reset.disabled = true;
+//player vs Computer game
 playerVsComputer.addEventListener("click", () => {
+  //enter player details are disabled for the player vs comp game
   player1.disabled = true;
   player2.disabled = true;
+ //
   playerVsPlayer.disabled = true;
   playerVsComputer.disabled = true;
+  //until the game-type is selected the start and reset button is disabled
   start.disabled = false;
   reset.disabled = false;
+  //selecting the game type and its always the current player is X
   gameType = "pVComp";
   currentPlayer = "X";
+  // the status bar displays the info depending on where you are in the game play
   statusBar.textContent = "Click Start Button";
 });
-
+//player vs player game
 playerVsPlayer.addEventListener("click", () => {
   
   playerVsPlayer.disabled = true;
@@ -62,10 +69,10 @@ playerVsPlayer.addEventListener("click", () => {
 start.addEventListener("click", startGame);
 
 function startGame() {
+    // disables the button once clicked
   start.disabled = true;
   totalTurns = 0;
-  // disables the button once clicked
-  statusBar.textContent = "Enjoy the Game";
+statusBar.textContent = "Enjoy the Game";
   gameTimer = setInterval(setTime, 1000, true);
   if (gameType === "pVp") {
     playerGame()
